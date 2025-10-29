@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Pakistani Quiz</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="refresh-button" class="home">Reset</button>
+        <div class="home-arrow">
+            <img id="arrow-header-icon" class="arrow-header-icon" src="Arrow-white.png" alt="Arrow Icon">
+        </div>
+    <div class="take-quiz-wrapper">
+        <button class="take-quiz" onclick="goto('quiz')">Take Quiz</button>
+        <div class="take-quiz-arrow">
+            <img class="arrow-header-icon" src="Arrow.png" alt="Arrow Icon">
+        </div>
+    </div>
+    </header>
+    <div class="main-box1">
+        <img class="pak-flag" src="pak pixel flag rb cr.png" alt="Pakistani Flag">
+        <div class="tagline-box">
+            <p class="big-tagline">ARE YOU A PAKISTANI?</p>
+            <p class="small-tagline">Dare to take a short quiz</p>
+        </div>
+        <div class="start-quiz-wrapper">
+            <button class="start-quiz" onclick="goto('quiz')">Start Quiz</button>
+            <div class="start-quiz-arrow">
+                <img class="arrow-icon" src="Arrow-white.png" alt="Arrow Icon">
+            </div>
+        </div>    
+    </div>
+    <div class="main-box2">
+        <div id="quiz" class="question-box">
+            <button class="begin-quiz">Begin Quiz</button>
+                <div class="begin-quiz-arrow">
+                    <img class="arrow-icon" src="Arrow.png" alt="Arrow Icon">
+                </div>    
+        </div>
+    </div>
+</body>
