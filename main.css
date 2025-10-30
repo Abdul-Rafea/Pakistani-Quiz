@@ -15,6 +15,11 @@
     75%{transform: scale(1.025);}
     100%{transform: scale(1);}
 }
+@keyframes pop_in{
+    0%{ transform: scale(1.2);}
+    50%{ transform: scale(1.1);}
+    100%{ transform: scale(1);}
+}
 html{
     font-size:16px ;
     overflow-x: hidden;
@@ -143,7 +148,7 @@ header{
     width: 33.56%;
     height: auto;
     margin: 2rem 0 2rem 0;
-    box-shadow: 0 0 20px 8px #1e1e1e;
+    box-shadow: 0 0 20px 4px #1e1e1e;
     transition: transform 0.2s ease-in-out;
 }
 .pak-flag:hover{
@@ -159,7 +164,7 @@ header{
     width: 81.38%;
     height: 192px;
     border-radius:50px ;
-    box-shadow: 0 0 20px 8px #1e1e1e;
+    box-shadow: 0 0 20px 4px #1e1e1e;
     transition: transform 0.2s ease-in-out;
 }
 .tagline-box:hover{
@@ -192,7 +197,7 @@ header{
     width: 46.66vw;
     height: 128px;
     margin: 2rem 0 0 0;
-    box-shadow: 0 0 20px 8px #1e1e1e;
+    box-shadow: 0 0 20px 4px #1e1e1e;
     background-color: #859f3d;
     border: none;
     border-radius: 50px;
@@ -226,21 +231,21 @@ header{
     box-shadow: 0 0 20px 8px #f6fcdf80;
 }
 .main-box2{
-    z-index:0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     width: 95.5vw;
     height: 896px;
-    margin: 4rem 0 0 0;
+    margin: 4rem 0 2rem 0;
     background-color: #31511e;
     box-shadow: 0 0 20px 4px #859f3d;
     border-radius: 10px;
     overflow-x: hidden;
-    position: relative;
 }
 .question-box{
-    z-index: 2;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,10 +254,11 @@ header{
     margin: 4rem 0 0 0;
     border-radius: 50px;
     background-color: #1a1a19;
+    box-shadow: 0 0 20px 4px #1e1e1e;
     position: relative;
 }
 .begin-quiz{
-    z-index: 3;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,4 +305,131 @@ header{
 }
 .begin-quiz:hover + .begin-quiz-arrow .arrow-icon{
     animation: button-arrow 200ms 1 linear;
+}
+.option-button-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 79.06%;
+    height: 224px ;
+    margin-top: 2rem;
+    position: relative;
+}
+.option-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47.05%;
+    height: 96px;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background-color: #f6fcdf;
+    box-shadow: 0 0 20px 2px #1e1e1e;
+}
+.option-button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 8px #f6fcdf80;
+}
+.quiz-overlay-buttons{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    height: 4rem;
+    margin-top: 1rem;
+}
+.reset-quiz{
+    border: none;
+    border-radius: 20px;
+    width: 22.49%;
+    height: 4rem;
+    background-color: #859f3d;
+    color: #f6fcdf;
+    box-shadow: 0 0 20px 2px #1e1e1e;
+    font-size: 1.5rem;
+}
+.reset-quiz:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 8px #f6fcdf80;
+}
+.overlay-button-wrapper{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.overlay-arrow{
+    width: 75%;
+    height: auto;
+}
+.previous{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    width: 45%;
+    height: 4rem;
+    background-color: #859f3d;
+    color: #f6fcdf;
+    box-shadow: 0 0 20px 2px #1e1e1e;
+    font-size: 1.5rem;
+    transform: rotate(180deg);
+}
+.previous:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 8px #f6fcdf80;
+}
+.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    width: 45%;
+    height: 4rem;
+    background-color: #859f3d;
+    color: #f6fcdf;
+    box-shadow: 0 0 20px 2px #1e1e1e;
+    font-size: 1.5rem;
+}
+.next:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 8px #f6fcdf80;
+}
+footer{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-divider{
+    width: 100vw;
+    height: 8px;
+    background-color: #f6fcdf;
+}
+.by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f6fcdf;
+    font-family: Pixelify Sans;
+    font-size: 2rem;
+    width: 4.93vw;
+    height: 4rem;
+    padding-bottom: 1.5rem;
+    box-sizing: border-box;
+}
+.lastshadow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f6fcdf;
+    font-family: Pixelify Sans;
+    font-size: 3.125rem;
+    width: 35vw;
+    height: 96;
 }
