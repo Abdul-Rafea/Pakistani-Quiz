@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <button id="refresh-button" class="home">Reset</button>
+        <button class="home" onclick="refresh()">Reset</button>
         <div class="home-arrow">
             <img id="arrow-header-icon" class="arrow-header-icon" src="Arrow-white.png" alt="Arrow Icon">
         </div>
@@ -37,11 +37,33 @@
         </div>    
     </div>
     <div class="main-box2">
-        <div id="quiz" class="question-box">
-            <button class="begin-quiz">Begin Quiz</button>
+        <div id="question-box" class="question-box">
+            <button id="begin-quiz" class="begin-quiz" onclick="question1()">Begin Quiz</button>
                 <div class="begin-quiz-arrow">
                     <img class="arrow-icon" src="Arrow.png" alt="Arrow Icon">
                 </div>    
         </div>
+        <div id="option-button-container" class="option-button-container">
+            <button id="option-button" class="option-button"></button>
+            <button id="option-button" class="option-button"></button>
+            <button id="option-button" class="option-button"></button>
+            <button id="option-button" class="option-button"></button>
+        </div>
+        <div id="quiz-overlay-buttons" class="quiz-overlay-buttons">
+        <button class="reset-quiz" onclick="refresh()">Reset Quiz</button>
+        <div class="overlay-button-wrapper">
+            <button class="previous">
+                <img class="overlay-arrow" src="Arrow-white.png" alt="Arrow icon">
+            </button>
+            <button class="next">
+                <img class="overlay-arrow" src="Arrow-white.png" alt="Arrow icon">
+            </button>
+        </div>    
+        </div>
     </div>
+    <footer>
+        <div class="footer-divider"></div>
+        <div class="by">by</div>
+        <div class="lastshadow">LastShadow</div>
+    </footer>
 </body>
