@@ -8,7 +8,7 @@
     <script defer src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
             <img id="arrow-header-icon" class="arrow-header-icon" src="Arrow-white.png" alt="Arrow Icon">
         </div>
     <div class="take-quiz-wrapper">
-        <button class="take-quiz" onclick="goto('quiz')">Take Quiz</button>
+        <button class="take-quiz" onclick="goto('question-box')">Take Quiz</button>
         <div class="take-quiz-arrow">
             <img class="arrow-header-icon" src="Arrow.png" alt="Arrow Icon">
         </div>
@@ -30,7 +30,7 @@
             <p class="small-tagline">Dare to take a short quiz</p>
         </div>
         <div class="start-quiz-wrapper">
-            <button class="start-quiz" onclick="goto('quiz')">Start Quiz</button>
+            <button class="start-quiz" onclick="goto('begin-quiz')">Start Quiz</button>
             <div class="start-quiz-arrow">
                 <img class="arrow-icon" src="Arrow-white.png" alt="Arrow Icon">
             </div>
@@ -38,27 +38,23 @@
     </div>
     <div class="main-box2">
         <div id="question-box" class="question-box">
-            <button id="begin-quiz" class="begin-quiz" onclick="question1()">Begin Quiz</button>
+            <div id="question-box-text" class="question-box-text">None</div>
+            <button id="begin-quiz" class="begin-quiz" onclick="quiz_start()">Begin Quiz</button>
                 <div class="begin-quiz-arrow">
                     <img class="arrow-icon" src="Arrow.png" alt="Arrow Icon">
                 </div>    
         </div>
         <div id="option-button-container" class="option-button-container">
-            <button id="option-button" class="option-button"></button>
-            <button id="option-button" class="option-button"></button>
-            <button id="option-button" class="option-button"></button>
-            <button id="option-button" class="option-button"></button>
+            <button id="option-button1" class="option-button" onclick="answer()"></button>
+            <button id="option-button2" class="option-button" onclick="answer()"></button>
+            <button id="option-button3" class="option-button" onclick="answer()"></button>
+            <button id="option-button4" class="option-button" onclick="answer()"></button>
         </div>
         <div id="quiz-overlay-buttons" class="quiz-overlay-buttons">
-        <button class="reset-quiz" onclick="refresh()">Reset Quiz</button>
-        <div class="overlay-button-wrapper">
-            <button class="previous">
-                <img class="overlay-arrow" src="Arrow-white.png" alt="Arrow icon">
-            </button>
-            <button class="next">
-                <img class="overlay-arrow" src="Arrow-white.png" alt="Arrow icon">
-            </button>
-        </div>    
+            <button class="reset-quiz" onclick="refresh()">Reset Quiz</button>
+            <button id="next" class="next" onclick="next(1)">
+                <img id="overlay-arrow" class="overlay-arrow" src="Arrow-white.png" alt="Arrow icon">
+            </button>  
         </div>
     </div>
     <footer>
