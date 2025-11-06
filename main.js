@@ -3,14 +3,9 @@ function refresh(){
 }
 function goto(id){
     const section = document.getElementById(id);
-    if (section) {
         section.scrollIntoView({
             behavior: 'smooth'
         });
-        }
-    else {
-        console.warn('got(): element not found with id',id); 
-    }
     }
 
 let x = 0;
@@ -117,7 +112,7 @@ function quiz_start(){
 function next(y){
     answer_reset();
     if (x==10){
-        Result();
+        result();
     }
     else if (y==1){
         x++;
@@ -259,4 +254,8 @@ function answer_reset(){
     element3.style.boxShadow = '0 0 20px 2px #1e1e1e';
     element4.style.border = 'none';
     element4.style.boxShadow = '0 0 20px 2px #1e1e1e';
+}
+
+function result(){
+const element1 = document.getElementById('')
 }
