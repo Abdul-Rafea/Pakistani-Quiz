@@ -9,40 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <header>
-        <button class="home" onclick="refresh()">Reset</button>
-        <div class="home-arrow">
-            <img id="arrow-header-icon" class="arrow-header-icon" src="Arrow-white.png" alt="Arrow Icon">
-        </div>
-    <div class="take-quiz-wrapper">
-        <button class="take-quiz" onclick="goto('question-box')">Take Quiz</button>
-        <div class="take-quiz-arrow">
-            <img class="arrow-header-icon" src="Arrow.png" alt="Arrow Icon">
-        </div>
-    </div>
-    </header>
     <div class="main-box1">
         <img class="pak-flag" src="pak pixel flag rb cr.png" alt="Pakistani Flag">
         <div class="tagline-box">
             <p class="big-tagline">ARE YOU A PAKISTANI?</p>
-            <p class="small-tagline">Dare to take a short quiz</p>
+            <p class="small-tagline">Dare to take a quiz</p>
         </div>
         <div class="start-quiz-wrapper">
-            <button class="start-quiz" onclick="goto('begin-quiz')">Start Quiz</button>
+            <button class="start-quiz" onclick="goto('main-box2')">Start Quiz</button>
             <div class="start-quiz-arrow">
-                <img class="arrow-icon" src="Arrow-white.png" alt="Arrow Icon">
+                <img class="start-quiz-arrow-icon" src="Arrow-white.png" alt="Arrow Icon">
             </div>
         </div>    
     </div>
-    <div class="main-box2">
+    <div id="main-box2" class="main-box2">
         <div id="question-box" class="question-box">
             <div id="question-box-text" class="question-box-text">None</div>
-            <button id="begin-quiz" class="begin-quiz" onclick="quiz_start()">Begin Quiz</button>
+            <div class="begin-quiz-wrapper">
+                <button id="begin-quiz" class="begin-quiz" onclick="quiz_start()">Begin Quiz</button>
                 <div class="begin-quiz-arrow">
-                    <img class="arrow-icon" src="Arrow.png" alt="Arrow Icon">
-                </div>    
+                    <img class="begin-quiz-arrow-icon" src="Arrow.png" alt="Arrow Icon">
+                </div>
+            </div>            
         </div>
         <div id="option-button-container" class="option-button-container">
             <button id="option-button1" class="option-button" onclick="answer()"></button>
@@ -59,7 +50,18 @@
     </div>
     <footer>
         <div class="footer-divider"></div>
-        <div class="by">by</div>
-        <div class="lastshadow">LastShadow</div>
+        <div class="name-container">
+            <div class="by">by</div>
+            <div class="lastshadow">LastShadow</div>
+        </div>
+        <div class="social-icons">
+            <div class="fab fa-github"></div>
+            <div class="fab fa-instagram"></div>
+            <div class="fab fa-youtube"></div>
+            <div class="fab fa-tiktok"></div>
+            <div class="fab fa-spotify"></div>
+            <div class="fab fa-whatsapp"></div>
+            <div class="fab fa-discord"></div>
+        </div>
     </footer>
 </body>
