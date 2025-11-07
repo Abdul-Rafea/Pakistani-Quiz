@@ -45,6 +45,14 @@ body{
     align-items: center;
     flex-direction: column;
 }
+strong{
+    font-size: 7vw;
+    font-family: Pixelify Sans;
+}
+b{
+    font-size: 5vw;
+    font-family: sans-serif;
+}
 .main-box1{
     z-index:0;
     display: flex;
@@ -61,6 +69,7 @@ body{
 }
 .pak-flag{
     width: 60%;
+    max-width: 250px;
     height: auto;
     box-shadow: 0 0 20px 4px #1e1e1e;
     transition: transform 0.2s ease-in-out;
@@ -75,13 +84,15 @@ body{
     justify-content: center;
     flex-direction: column;
     background-color: #f6fcdf;
-    width: 81.38%;
+    width: 80%;
     height: auto;
     margin: 2rem 0 2rem 0;
     border-radius:50px ;
     box-shadow: 0 0 20px 4px #1e1e1e;
     transition: transform 0.2s ease-in-out;
     overflow-x: hidden;
+    text-align: center;
+    text-wrap: wrap;
 }
 .tagline-box:hover{
     transform: scale(1.05);
@@ -92,18 +103,17 @@ body{
     text-align: center;
     text-wrap: wrap;
     font-family: Pixelify Sans;
-    font-size: 8rem;
+    font-size: min(10vw,5rem);
     color: #1a1a19;
     margin: 0;
     padding: 0;
-    
 }
 .small-tagline{
     width: 100%;
     text-align: center;
     text-wrap: wrap;
     font-family: Pixelify Sans;
-    font-size: 6rem;
+    font-size: min(8vw, 4rem);
     color: #1a1a19;
     margin: 0;
     padding: 0;
@@ -111,7 +121,9 @@ body{
 .start-quiz-wrapper{
     position: relative;
     width: 50%;
-    height: 15%;
+    height: 14%;
+    max-height: 200px;
+
 }
 .start-quiz{
     z-index: 2;
@@ -123,7 +135,8 @@ body{
     border: none;
     border-radius: 50px;
     color: #f6fcdf;
-    font-size: 5.5rem; 
+    font-size: min(8vw,4rem);
+    text-wrap: wrap;
     font-family: Pixelify Sans;
 }
 .start-quiz-arrow{
@@ -147,6 +160,7 @@ body{
     pointer-events: none;
     opacity: 0;
     width: 70%;
+    max-width: 225px;
     height: auto;
 }
 .start-quiz:hover + .start-quiz-arrow .start-quiz-arrow-icon{
@@ -168,6 +182,7 @@ body{
     width: 95.5vw;
     height: 100dvh;
     margin: 2rem 0 0 0;
+    padding: 0;
     background-color: #31511e;
     box-shadow: 0 0 20px 4px #859f3d;
     border-radius: 10px;
@@ -179,7 +194,8 @@ body{
     align-items: center;
     width: 90%;
     height: 50%;
-    margin: 4rem 0 0 0;
+    margin-top: 2%;
+    box-sizing: border-box;
     border-radius: 50px;
     background-color: #1a1a19;
     box-shadow: 0 0 20px 4px #1e1e1e;
@@ -194,7 +210,7 @@ body{
     height: 100%;
     text-align: center;
     text-wrap: wrap;
-    font-size: 6rem;
+    font-size: min(8vw,5rem);
     position: absolute;
     color: #f6fcdf;
     font-family: Pixelify Sans;
@@ -202,7 +218,8 @@ body{
 .begin-quiz-wrapper{
     position: relative;
     width: 62%;
-    height: 20%;
+    height: 40%;
+    max-height: 200px;
 
 }
 .begin-quiz{
@@ -241,6 +258,7 @@ body{
     pointer-events: none;
     opacity: 0;
     width: 60%;
+    max-width: 225px;
     height: auto;
 }
 .begin-quiz:hover{
@@ -264,7 +282,8 @@ body{
     gap: 10% 6%;
     width: 85%;
     height: 25%;
-    margin: 2% 0 2% 0;
+    margin-top: 2%;
+    box-sizing: border-box;
     position: relative;
 }
 .option-button{
@@ -291,7 +310,8 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 75%;
-    height: 8%;
+    height: 10%;
+    margin-top: 1%;
 }
 .reset-quiz{
     border: none;
@@ -304,6 +324,9 @@ body{
     text-wrap: wrap;
     font-size: 3rem;
     font-family: Pixelify Sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .reset-quiz:hover{
     transform: scale(1.05);
@@ -311,6 +334,7 @@ body{
 }
 .overlay-arrow{
     width: 65%;
+    max-width: 130px;
     height: auto;
 }
 .next{
@@ -338,7 +362,7 @@ footer{
     flex-wrap: wrap;
     gap: 0;
     width: 100%;
-    height: 30%;
+    height: 60vw;
     margin-top: 2rem
 }
 .footer-divider{
@@ -351,7 +375,7 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 40%;
+    height: 30%;
 }
 .by{
     display: flex;
@@ -359,7 +383,7 @@ footer{
     align-items: center;
     color: #f6fcdf;
     font-family: Pixelify Sans;
-    font-size: 4rem;
+    font-size: 5rem;
     width: 10%;
     height: 100%;
     padding-bottom: 2rem;
@@ -371,9 +395,43 @@ footer{
     justify-content: center;
     color: #f6fcdf;
     font-family: Pixelify Sans;
-    font-size: 5rem;
+    font-size: 6rem;
     text-align: center;
     text-wrap: wrap;
-    width: 55%;
+    width: 65%;
     height: 100%;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+
+}
+.fab{
+    font-size: 10rem;
+    margin: 3rem;
+    color: #859f3d;
+}
+.footer-tagline{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    font-size: 5rem;
+    font-family: Pixelify Sans;
+    color: #f6fcdf;
+}
+.contact{
+    font-size: 4rem;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    color: #f6fcdf;
 }
