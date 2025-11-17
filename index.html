@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="ofx-h m-0 p-0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
@@ -11,51 +11,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-    <div class="main-box1">
-        <img class="pak-flag" src="pak pixel flag rb cr.png" alt="Pakistani Flag">
-        <div class="tagline-box">
-            <p class="big-tagline">ARE YOU A PAKISTANI?</p>
-            <p class="small-tagline">Dare to take a quiz</p>
+<body class="ofx-h p-0 m-0 d-flex jc-center ai-center fd-column">
+    <div class="main-container d-flex jc-center ai-center fd-column m-tb-2rem p-rela" id="main-box1">
+        <img class="pak-flag bs-element t-ease-in-out" src="pak pixel flag rb cr.png" alt="Pakistani Flag">
+        <div class="tagline-box flex-center bs-element fd-column ofx-h m-tb-2rem br-50 t-ease-in-out">
+            <p class="big-tagline m-0 p-0 ta-center tw-wrap f-pixel">ARE YOU A PAKISTANI?</p>
+            <p class="small-tagline m-0 p-0 ta-center tw-wrap f-pixel">Dare to take a quiz</p>
         </div>
-        <div class="start-quiz-wrapper">
-            <button class="start-quiz" onclick="goto('main-box2')">Start Quiz</button>
-            <div class="start-quiz-arrow">
-                <img class="start-quiz-arrow-icon" src="Arrow-white.png" alt="Arrow Icon">
+        <div class="start-quiz-wrapper p-rela">
+            <button class="start-quiz bs-element b-none tw-wrap f-pixel br-50 c-p" onclick="goto('main-box2')">Start Quiz</button>
+            <div class="start-quiz-arrow d-flex jc-center ai-center br-50 ofx-h p-abso pe-none t-0 t-ease-in-out">
+                <img class="start-quiz-arrow-icon pe-none p-rela op-0 bc-tranp" src="Arrow-white.png" alt="Arrow Icon">
             </div>
         </div>    
     </div>
-    <div id="main-box2" class="main-box2">
-        <div id="question-box" class="question-box">
-            <div id="question-box-text" class="question-box-text">None</div>
-            <div class="begin-quiz-wrapper">
-                <button id="begin-quiz" class="begin-quiz" onclick="quiz_start()">Begin Quiz</button>
-                <div class="begin-quiz-arrow">
-                    <img class="begin-quiz-arrow-icon" src="Arrow.png" alt="Arrow Icon">
+    <div id="main-box2" class="main-container d-flex jc-center ai-center fd-column m-tb-2rem">
+        <div id="question-box" class="question-box d-flex jc-center ai-center bs-element bs-bb br-50 p-rela">
+            <div id="question-box-text" class="question-box-text d-flex jc-center ai-center f-wrap tw-wrap ta-center f-pixel p-abso">None</div>
+            <div class="begin-quiz-wrapper p-abso">
+                <button id="begin-quiz" class="begin-quiz flex-center p-abso t-0 br-50 c-pointer f-pixel b-none" onclick="quiz_start()">Begin Quiz</button>
+                <div class="begin-quiz-arrow d-flex jc-center ai-center t-0 pe-none t-ease-in-out br-50">
+                    <img class="begin-quiz-arrow-icon pe-none op-0" src="Arrow.png" alt="Arrow Icon">
                 </div>
             </div>            
         </div>
-        <div id="option-button-container" class="option-button-container">
-            <button id="option-button1" class="option-button" onclick="answer(1)"></button>
-            <button id="option-button2" class="option-button" onclick="answer(2)"></button>
-            <button id="option-button3" class="option-button" onclick="answer(3)"></button>
-            <button id="option-button4" class="option-button" onclick="answer(4)"></button>
+        <div id="option-button-container" class="option-button-container d-none jc-center ai-center f-wrap p-rela bs-bb">
+            <button id="option-button1" class="option-button b-none p-0 bs-element f-piedra br-50" onclick="answer(1)"></button>
+            <button id="option-button2" class="option-button b-none p-0 bs-element f-piedra br-50" onclick="answer(2)"></button>
+            <button id="option-button3" class="option-button b-none p-0 bs-element f-piedra br-50" onclick="answer(3)"></button>
+            <button id="option-button4" class="option-button b-none p-0 bs-element f-piedra br-50" onclick="answer(4)"></button>
         </div>
-        <div id="quiz-overlay-buttons" class="quiz-overlay-buttons">
-            <button class="reset-quiz" onclick="refresh()">Reset Quiz</button>
-            <button id="next" class="next" onclick="next(1)">
+        <div id="quiz-overlay-buttons" class="quiz-overlay-buttons d-none jc-sb ai-center">
+            <button class="reset-quiz b-none br-50 d-flex jc-center ai-center tw-wrap f-pixel bs-element" onclick="refresh()">Reset Quiz</button>
+            <button id="next" class="next d-flex jc-center ai-center b-none br-50 f-pixel bs-element" onclick="next(1)">
                 <img id="overlay-arrow" class="overlay-arrow" src="Arrow-white.png" alt="Arrow icon">
             </button>  
         </div>
     </div>
-    <footer>
+    <footer class="d-flex jc-center ai-center fd-column">
         <div class="footer-divider"></div>
-        <div class="name-container">
-            <div class="by">by</div>
-            <div class="lastshadow">LastShadow</div>
-        </div>
-        <div class="social-icons">
-            <div class="footer-tagline">Connect with me : -</div>
+        <div class="lastshadow ta-center f-pixel"><span>by</span>&nbsp; &nbsp;LastShadow</div>
+        <div id="social-icons" class="social-icons d-flex jc-center ai-center f-wrap">
+            <div class="footer-tagline d-flex ai-center f-pixel">Connect with me : -</div>
             <a href="https://github.com/Abdul-Rafea" target="_blank" aria-label="Github">
                 <div class="fab fa-github"></div>
             </a>

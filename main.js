@@ -1,6 +1,5 @@
-let x = 0;
-let z = 0;
-let bool = true;
+let question_no = 0;
+let marks_ovewrite= true;
 let total_marks = 0;
 
 function refresh(){
@@ -15,17 +14,17 @@ function goto(id){
 }
 
 function elements_in(){
-     x++;
+    question_no++;
     const element1 = document.getElementById('option-button-container');
-    element1.style.display = 'flex';
-    element1.style.animation = 'pop_in 100ms linear 1';
+        element1.style.display = 'flex';
+        element1.style.animation = 'pop_in 100ms linear 1';
     const element2 = document.getElementById('quiz-overlay-buttons');
-    element2.style.display = 'flex';
-    element2.style.animation = 'pop_in 100ms linear 1'
+        element2.style.display = 'flex';
+        element2.style.animation = 'pop_in 100ms linear 1'
     const element3 = document.getElementById('begin-quiz');
-    element3.style.display = 'none';
+        element3.style.display = 'none';
     const element4 = document.getElementById('question-box');
-    element4.style.animation = 'pop_in 100ms linear 1';
+        element4.style.animation = 'pop_in 100ms linear 1';
 }
 
 function question(){
@@ -34,10 +33,9 @@ function question(){
     const element3 = document.getElementById('option-button2');
     const element4 = document.getElementById('option-button3');
     const element5 = document.getElementById('option-button4');
-    const element6 = document.getElementById('quiz-overlay-buttons')
     element1.style.display = 'flex';
 
-  switch(x){
+  switch(question_no){
         case 1:
             element1.innerHTML = 'How many provinces does Pakistan have(officially)?';
             element2.innerHTML = '4';
@@ -69,7 +67,8 @@ function question(){
         case 5:
             element1.innerHTML = 'What is the capital of Pakistan?'
             element2.innerHTML = 'Faisalabad';
-            element3.innerHTML = 'Karachi';                element4.innerHTML = 'Islamabad';
+            element3.innerHTML = 'Karachi';
+            element4.innerHTML = 'Islamabad';
             element5.innerHTML = 'Lahore';
             break;
         case 6:
@@ -115,13 +114,14 @@ function quiz_start(){
 }
 
 function next(y){
-    bool = true;
+    marks_ovewrite = true;
     answer_reset();
-    if (x==10){
+
+    if (question_no==10){
         result();
     }
     else if (y==1){
-        x++;
+        question_no++;
         question();
     }
     else {
@@ -129,156 +129,118 @@ function next(y){
     }
 }
 
-function answer(y){
+function option1(y){
     const element1 = document.getElementById('option-button1');
     const element2 = document.getElementById('option-button2');
     const element3 = document.getElementById('option-button3');
     const element4 = document.getElementById('option-button4');
-    const element5 = document.getElementById('next');
-    const element6 = document.getElementById('overlay-arrow');
 
-    switch(x){
+    element1.style.border = '3px solid greenyellow';
+    element1.style.boxShadow = '0 0 20px 2px greenyellow';
+    element2.style.border = '3px solid red';
+    element2.style.boxShadow = '0 0 20px 2px red';
+    element3.style.border = '3px solid red';
+    element3.style.boxShadow = '0 0 20px 2px red';
+    element4.style.border = '3px solid red';
+    element4.style.boxShadow = '0 0 20px 2px red';
+
+    if (y==1 && marks_ovewrite==true){
+        total_marks++;
+        marks_ovewrite = false;
+    }
+}
+function option2(y){
+    const element1 = document.getElementById('option-button1');
+    const element2 = document.getElementById('option-button2');
+    const element3 = document.getElementById('option-button3');
+    const element4 = document.getElementById('option-button4');
+
+    element1.style.border = '3px solid red';
+    element1.style.boxShadow = '0 0 20px 2px red';
+    element2.style.border = '3px solid greenyelllow';
+    element2.style.boxShadow = '0 0 20px 2px greenyellow';
+    element3.style.border = '3px solid red';
+    element3.style.boxShadow = '0 0 20px 2px red';
+    element4.style.border = '3px solid red';
+    element4.style.boxShadow = '0 0 20px 2px red';
+
+    if (y==2 && marks_ovewrite==true){
+        total_marks++;
+        marks_ovewrite = false;
+    }
+}
+function option3(y){
+    const element1 = document.getElementById('option-button1');
+    const element2 = document.getElementById('option-button2');
+    const element3 = document.getElementById('option-button3');
+    const element4 = document.getElementById('option-button4');
+    
+    element1.style.border = '3px solid red';
+    element1.style.boxShadow = '0 0 20px 2px red';
+    element2.style.border = '3px solid red';
+    element2.style.boxShadow = '0 0 20px 2px red';
+    element3.style.border = '3px solid greenyellow';
+    element3.style.boxShadow = '0 0 20px 2px greenyellow';
+    element4.style.border = '3px solid red';
+    element4.style.boxShadow = '0 0 20px 2px red';
+    
+    if (y==3 && marks_ovewrite==true){
+        total_marks++;
+        marks_ovewrite = false;
+    }
+}
+function option4(y){
+    const element1 = document.getElementById('option-button1');
+    const element2 = document.getElementById('option-button2');
+    const element3 = document.getElementById('option-button3');
+    const element4 = document.getElementById('option-button4');
+    
+    element1.style.border = '3px solid red';
+    element1.style.boxShadow = '0 0 20px 2px red';
+    element2.style.border = '3px solid red';
+    element2.style.boxShadow = '0 0 20px 2px red';
+    element3.style.border = '3px solid red';
+    element3.style.boxShadow = '0 0 20px 2px red';
+    element4.style.border = '3px solid greenyellow';
+    element4.style.boxShadow = '0 0 20px 2px greenyellow';
+    
+    if (y==4 && marks_ovewrite==true){
+        total_marks++;
+        marks_ovewrite = false;
+    }
+}
+
+function answer(y){
+    switch(question_no){
         case 1:
-            element1.style.border = '3px solid greenyellow';
-            element1.style.boxShadow = '0 0 20px 2px greenyellow';
-            element2.style.border = '3px solid red';
-            element2.style.boxShadow = '0 0 20px 2px red';
-            element3.style.border = '3px solid red';
-            element3.style.boxShadow = '0 0 20px 2px red';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==1 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+           option1(y);
             break;
         case 2:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid greenyelllow';
-            element2.style.boxShadow = '0 0 20px 2px greenyellow';
-            element3.style.border = '3px solid red';
-            element3.style.boxShadow = '0 0 20px 2px red';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==2 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option2(y);
             break;
         case 3:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid greenyelllow';
-            element2.style.boxShadow = '0 0 20px 2px greenyellow';
-            element3.style.border = '3px solid red';
-            element3.style.boxShadow = '0 0 20px 2px red';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==2 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option2(y);
             break;
         case 4:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid red';
-            element2.style.boxShadow = '0 0 20px 2px red';
-            element3.style.border = '3px solid red';
-            element3.style.boxShadow = '0 0 20px 2px red';
-            element4.style.border = '3px solid greenyellow';
-            element4.style.boxShadow = '0 0 20px 2px greenyellow';
-            if (y==4 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option4(y);
             break;
         case 5:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid red';
-            element2.style.boxShadow = '0 0 20px 2px red';
-            element3.style.border = '3px solid greenyellow';
-            element3.style.boxShadow = '0 0 20px 2px greenyellow';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==3 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+           option3(y);
             break;
         case 6:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid red';
-            element2.style.boxShadow = '0 0 20px 2px red';
-            element3.style.border = '3px solid greenyellow';
-            element3.style.boxShadow = '0 0 20px 2px greenyellow';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==3 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option3(y);
             break;
         case 7:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid greenyellow';
-            element2.style.boxShadow = '0 0 20px 2px greenyellow';
-            element3.style.border = '3px solid red';
-            element3.style.boxShadow = '0 0 20px 2px red';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==2 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option2(y);
             break;
         case 8:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid greenyellow';
-            element2.style.boxShadow = '0 0 20px 2px greenyellow';
-            element3.style.border = '3px solid red';
-            element3.style.boxShadow = '0 0 20px 2px red';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==2 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option2(y);
             break;
         case 9:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid red';
-            element2.style.boxShadow = '0 0 20px 2px red';
-            element3.style.border = '3px solid greenyellow';
-            element3.style.boxShadow = '0 0 20px 2px greenyellow';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            if (y==3 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option3(y);
             break;
         case 10:
-            element1.style.border = '3px solid red';
-            element1.style.boxShadow = '0 0 20px 2px red';
-            element2.style.border = '3px solid red';
-            element2.style.boxShadow = '0 0 20px 2px red';
-            element3.style.border = '3px solid greenyellow';
-            element3.style.boxShadow = '0 0 20px 2px greenyellow';
-            element4.style.border = '3px solid red';
-            element4.style.boxShadow = '0 0 20px 2px red';
-            element5.textContent = "Result";
-            element5.style.animation = 'blink 500ms linear infinite';
-            if (y==3 && bool==true){
-                total_marks++;
-                bool = false;
-            }
+            option3(y);
 }
 }
 
@@ -305,6 +267,7 @@ const element3 = document.getElementById('option-button-container');
 
 let result = total_marks;
 let msg = "";
+
     if (result>=5){
         msg = "You Passed";        
     }
@@ -313,8 +276,9 @@ let msg = "";
     } 
 
 const text = `<strong>${msg}</strong> <b>Marks : ${result}/10</b>`;
-element1.innerHTML = text;
-element1.style.flexDirection = 'column';
-element2.style.display = 'none';
-element3.style.display = 'none';
+
+    element1.innerHTML = text;
+    element1.style.flexDirection = 'column';
+    element2.style.display = 'none';
+    element3.style.display = 'none';
 }
